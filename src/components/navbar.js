@@ -11,6 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const pages = ['News', 'Products', 'About us', 'Contact us'];
 const settings = ['Profile', 'Contact us', 'Cart', 'Logout'];
@@ -102,7 +103,11 @@ const ResponsiveAppBar = () => {
               </Button>
             ))}
           </Box>
-
+          <Box sx={{ ml: -2 }}>
+              <button>
+              <ShoppingCartIcon/>
+              </button>
+          </Box>
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>

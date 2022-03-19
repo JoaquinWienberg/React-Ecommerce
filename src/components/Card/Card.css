@@ -1,0 +1,31 @@
+.CardContainer {
+    display:inline;
+    padding: 15px;
+}
+
+.Card {
+    background: linear-gradient(45deg, rgba(34,227,238,1) 32%, rgba(170,62,236,1) 98%);
+    animation: rotate 5s linear infinite;
+    position: relative;
+    background-size: 200%;
+    max-width: 300px;
+    padding: 5px;
+    margin: 10px;
+}
+
+@keyframes rotate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.Card div{
+    background-color: black;
+    color: white;
+}
