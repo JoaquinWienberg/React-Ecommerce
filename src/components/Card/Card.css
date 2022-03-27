@@ -9,7 +9,7 @@
     position: relative;
     background-size: 200%;
     max-width: 300px;
-    padding: 5px;
+    padding: 8px;
     margin: 10px;
 }
 
@@ -28,4 +28,5 @@
 .Card div{
     background-color: black;
     color: white;
+    padding: 8px;
 }

@@ -9,7 +9,7 @@ function App() {
       <ResponsiveAppBar />
       <div>
         <h2>Nuevos ingresos</h2>
-        <ProductList/>
+        <ProductList productType="Placas de video"/>
       </div>
     </div>
   );
