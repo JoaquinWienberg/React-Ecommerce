@@ -1,23 +1,29 @@
-{"ProductDatabase": [
+[
     {
       "id":1,
       "product":"Placa de video MSI RTX 3070 TI",
       "price":250000,
       "payments":20833,
-      "stock":5
+      "stock":5,
+      "desc": "Nueva placa de alta gama. Eleva tus fps con el mejor cooling silencioso. ",
+      "url":"img/msi3070.jpg"
     },
     {
       "id":2,
       "product":"Placa de video EVGA RTX 3080",
       "price":350000,
       "payments":29166,
-      "stock":2
+      "stock":2,
+      "desc": "Nuevo modelo por parte de EVGA, con un toque extra de RBG para los aficionados.",
+      "url":"img/evga3080.jpg"
     },
     {
       "id":3,
       "product":"Placa de video AORUS RTX 3060",
       "price":170000,
       "payments":14166,
-      "stock":9
+      "stock":9,
+      "desc": "Una de las placas mas modernas del mercado. Ideal para juegos competitivos en altas resoluciones",
+      "url":"img/aor3060.jpg"
     }
-  ]}
+  ]

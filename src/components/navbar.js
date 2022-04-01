@@ -12,8 +12,9 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Link } from 'react-router-dom';
 
-const pages = ['News', 'Products', 'About us', 'Contact us'];
+const pages = [ 'Home', 'Products', 'About us', 'Contact Us'];
 const settings = ['Profile', 'Contact us', 'Cart', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -98,8 +99,9 @@ const ResponsiveAppBar = () => {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
-              >
+              ><Link to={"/"} sx={{ my: 2, color: 'white', display: 'block' }}>
                 {page}
+                </Link>
               </Button>
             ))}
           </Box>

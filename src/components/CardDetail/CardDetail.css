@@ -1,0 +1,54 @@
+.CardDetailBox {
+    border: solid 6px black;
+    padding: 0;
+    border-radius: 10px;
+    animation: colorChange 5s linear infinite;
+    width:900px;
+    margin-top: 10px;
+}
+
+.CardDetail {
+    padding: 10px 2px;
+    text-align: center;
+    width:450px
+}
+
+.CardDetail p:nth-child(5){
+    text-align: justify;
+    padding: 0px 5px;
+}
+
+@keyframes colorChange {
+    0% {
+        border: solid 6px rgba(34,227,238,1);
+    }
+    50% {
+        border: solid 6px rgba(170,62,236,1);
+    }
+    100% {
+        border: solid 6px rgba(34, 228, 238, 0.829);
+    }
+}
+
+.CardDetail h3 {
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+    animation: move 1s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        top:0px;
+    }
+    33% {
+        top:-2px;
+    }
+    66% {
+        top:2px;
+    }
+    100% {
+        top: 0px;
+    }
+}
