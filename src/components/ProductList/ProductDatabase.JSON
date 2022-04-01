@@ -6,7 +6,7 @@
       "payments":20833,
       "stock":5,
       "desc": "Nueva placa de alta gama. Eleva tus fps con el mejor cooling silencioso. ",
-      "url":"img/msi3070.jpg"
+      "url":"https://i.ibb.co/SxMq5Fy/msi3070.jpg"
     },
     {
       "id":2,
@@ -15,7 +15,7 @@
       "payments":29166,
       "stock":2,
       "desc": "Nuevo modelo por parte de EVGA, con un toque extra de RBG para los aficionados.",
-      "url":"img/evga3080.jpg"
+      "url":"https://i.ibb.co/fnKwyPH/evga3080.jpg"
     },
     {
       "id":3,
@@ -24,6 +24,6 @@
       "payments":14166,
       "stock":9,
       "desc": "Una de las placas mas modernas del mercado. Ideal para juegos competitivos en altas resoluciones",
-      "url":"img/aor3060.jpg"
+      "url":"https://i.ibb.co/wyDF7B4/aor3060.jpg"
     }
   ]

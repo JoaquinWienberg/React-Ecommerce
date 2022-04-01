@@ -1,7 +1,6 @@
 import React,{ useState, useEffect } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import Box from '@mui/material/Box';
-import CardMedia from '@mui/material/CardMedia';
 import "./CardDetail.css";
 
 export default function CardDetail (props) {
@@ -12,7 +11,7 @@ export default function CardDetail (props) {
     return (
         <div>
             <Box sx={{ display: 'flex', justifyContent: 'space-evenly', alignItems: "center" }} className="CardDetailBox">
-                <img src={require(`../../img/aor3060.jpg`)}></img>
+                <img src={urlImg}></img>
                 <div className="CardDetail">
                     <h3>{props.product}</h3>
                     <p>$ {props.price}</p>

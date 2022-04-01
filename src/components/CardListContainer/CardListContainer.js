@@ -7,7 +7,7 @@ import CardDetail from "../CardDetail/CardDetail";
 
 export default function CardListContainer (props){
 
-    const url = "https://run.mocky.io/v3/f881e80a-f38d-49e3-a8c3-878b245013db";
+    const url = "https://run.mocky.io/v3/7c4905cb-954c-482a-a437-4ff692285f99";
     const [availableStock, setavailableStock] = useState([]);
     
     const getItem = async () => {       //Imports the updated stock from Mocky
