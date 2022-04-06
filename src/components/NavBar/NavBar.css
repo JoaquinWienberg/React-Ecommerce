@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Press+Start+2P&display=swap');
+
+.navItem {
+    text-decoration: none;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 13px;
+    padding-left: 15px;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+}

@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Press+Start+2P&display=swap');
+
+
+.background {
+    background-color: azure;
+    min-height: 100vh;
+}
+
+.background .background-container{
+    background-color: black;
+    opacity: 0.7;
+    min-height: 100vh; 
+    padding-top: 80px;
+}
+
+.background .background-container h2{
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.background .background-container .products{
+    margin-top: 60px;
+    overflow-x: visible;
+}
+
+
+.background .background-container .products a{
+    color: white;
+    border-radius: 20px;
+    border: white solid 2px;
+    padding: 5px;
+    text-decoration: none;
+    font-family: 'Mukta', sans-serif;
+    overflow-x: visible;
+}
+
+.background .background-container .products a:hover{
+    color: black;
+    border-radius: 20px;
+    background-color: white;
+    border: white solid 2px;
+    padding: 5px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cloud {
+    position: absolute;
+    animation: cloud-move 15s linear infinite;
+    display: block;
+    width: 150px;
+    height: auto;
+    overflow-x: hidden;
+}
+
+@keyframes cloud-move {
+    
+    0% {
+        transform: translateX(100vw);
+        overflow-x: hidden;
+    }
+
+    100% {
+        transform: translateX(0px);
+        overflow-x: hidden;
+    }
+}
+
+.cloud2 {
+    position: absolute;
+    animation: cloud-move2 20s linear infinite;
+    display: block;
+    width: 250px;
+    height: auto;
+    overflow-x:hidden;
+}
+
+@keyframes cloud-move2 {
+    
+    0% {
+        transform: translate(0px,30px) scaleX(-1);
+        overflow-x: hidden;
+    }
+
+    100% {
+        transform: translate(100vw,30px) scaleX(-1);
+        overflow-x: hidden;
+    }
+}

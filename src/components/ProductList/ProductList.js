@@ -8,7 +8,7 @@ import React,{useState, useEffect} from "react";
 
 const ProductList = (props) => {
     
-    const url = "https://run.mocky.io/v3/7c4905cb-954c-482a-a437-4ff692285f99";
+    const url = "https://run.mocky.io/v3/2f850c35-595f-43c8-ba56-7cd21c8acc19";
     const [availableStock, setavailableStock] = useState([]);
     
     const getItem = async () => {       //Imports the updated stock from Mocky
@@ -21,7 +21,7 @@ const ProductList = (props) => {
             return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(getItem())
-            }, 2000);
+            }, 200);
         })
     };
 
@@ -39,31 +39,11 @@ const ProductList = (props) => {
             <Box sx={{p: 1, m: 1, bgcolor: 'background.paper', borderRadius: 1, color: "#3f51b5", fontSize: 30}}>{props.productType}</Box>
             <Box sx={{display: 'flex', justifyContent: 'center', p: 1, m: 1, bgcolor: 'background.paper', borderRadius: 1, }}>
                 {availableStock.map((currentItem) => {
-                    return <Card key ={currentItem.id} product={currentItem.product} price={currentItem.price} payments={currentItem.payments} stock={currentItem.stock}/>
+                    return <Card id={currentItem.id} key ={currentItem.id} product={currentItem.product} type={currentItem.type} price={currentItem.price} payments={currentItem.payments} stock={currentItem.stock}/>
                 })}
             </Box>
         </div> 
     )
 }
-
-
-/* const productDatabase = [{
-                            id: 1,
-                            product: "Placa de video MSI RTX 3070 TI",
-                            price:250000,
-                            payments: 20833,
-                            stock: 5},
-                        {
-                            id: 2,
-                            product: "Placa de video EVGA RTX 3080",
-                            price:350000,
-                            payments: 29166,
-                            stock: 2},
-                        {
-                            id: 3,
-                            product: "Placa de video AORUS RTX 3060",
-                            price:170000,
-                            payments: 14166,
-                            stock: 9}]*/
 
 export default ProductList;

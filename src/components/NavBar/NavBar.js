@@ -13,8 +13,13 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
+import "./NavBar.css"
 
-const pages = [ 'Home', 'Products', 'About us', 'Contact Us'];
+const pages = [{title: 'Inicio', linkUrl: "/"} ,
+              {title: 'Productos', linkUrl: "/Products"} ,
+              {title: 'Sobre nosotros', linkUrl: "/"} ,
+              {title: 'Contactenos', linkUrl: "/"}];
+//const pages = [ 'Home', 'Products', 'About us', 'Contact Us'];
 const settings = ['Profile', 'Contact us', 'Cart', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -44,9 +49,11 @@ const ResponsiveAppBar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
+            sx={{ mr: 2, display: { xs: 'none', md: 'flex', textDecoration: "none" } }}
           >
-            Computer Store
+              <Link to={"/"} sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none" }} className="logo">
+                Computer Store
+              </Link>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -79,8 +86,10 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.title} onClick={handleCloseNavMenu} color="black" style={{backgroundColor: "#2c387e"}}>
+                <Link to={page.linkUrl} sx={{ my: 2, color: 'green', display: 'block', textDecoration: "none" }} className="navItem">
+                  <Typography textAlign="center">{page.title}</Typography>
+                </Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -90,17 +99,20 @@ const ResponsiveAppBar = () => {
             noWrap
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-          >
+            >
+            <Link to={"/"} sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none" }}>
             Computer Store
+              </Link>
+            
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                key={page.title}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              ><Link to={"/"} sx={{ my: 2, color: 'white', display: 'block' }}>
-                {page}
+                sx={{ my: 2, color: 'green', display: 'flex',textDecoration: "none", justifyContent: "center" }} className="navItem"
+              ><Link to={page.linkUrl} sx={{ my: 2, color: 'green', display: 'block', textDecoration: "none" }} className="navItem">
+                {page.title}
                 </Link>
               </Button>
             ))}

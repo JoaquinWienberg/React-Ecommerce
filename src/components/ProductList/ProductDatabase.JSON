@@ -6,7 +6,8 @@
       "payments":20833,
       "stock":5,
       "desc": "Nueva placa de alta gama. Eleva tus fps con el mejor cooling silencioso. ",
-      "url":"https://i.ibb.co/SxMq5Fy/msi3070.jpg"
+      "url":"https://i.ibb.co/SxMq5Fy/msi3070.jpg",
+      "type":"GPU"
     },
     {
       "id":2,
@@ -15,7 +16,8 @@
       "payments":29166,
       "stock":2,
       "desc": "Nuevo modelo por parte de EVGA, con un toque extra de RBG para los aficionados.",
-      "url":"https://i.ibb.co/fnKwyPH/evga3080.jpg"
+      "url":"https://i.ibb.co/fnKwyPH/evga3080.jpg",
+      "type":"GPU"
     },
     {
       "id":3,
@@ -24,6 +26,17 @@
       "payments":14166,
       "stock":9,
       "desc": "Una de las placas mas modernas del mercado. Ideal para juegos competitivos en altas resoluciones",
-      "url":"https://i.ibb.co/wyDF7B4/aor3060.jpg"
+      "url":"https://i.ibb.co/wyDF7B4/aor3060.jpg",
+      "type":"GPU"
+    },
+    {
+      "id":4,
+      "product":"Corsair Vengeance RGB PRO 8GB DDR4",
+      "price":12000,
+      "payments":1000,
+      "stock":12,
+      "desc": "Memoria de alta gama. Estos modulos tienen una frecuencia de 3600mhz. Incluye garantia del fabricante por 12 meses",
+      "url":"https://i.ibb.co/C7xR4tg/71-Kkm5n-IRKL-AC-SY450-PIbundle-2-Top-Right-0-0-SH20.jpg",
+      "type":"RAM"
     }
   ]

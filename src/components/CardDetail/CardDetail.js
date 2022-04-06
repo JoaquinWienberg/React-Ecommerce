@@ -2,22 +2,26 @@ import React,{ useState, useEffect } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import Box from '@mui/material/Box';
 import "./CardDetail.css";
+import pay from "../../img/payments.png"
 
 export default function CardDetail (props) {
     
     const urlImg = props.urlImg;
-    console.log(urlImg);
+    //console.log(urlImg);
 
     return (
-        <div>
+        <div className="container">
             <Box sx={{ display: 'flex', justifyContent: 'space-evenly', alignItems: "center" }} className="CardDetailBox">
                 <img src={urlImg}></img>
                 <div className="CardDetail">
                     <h3>{props.product}</h3>
-                    <p>$ {props.price}</p>
+                    <p className="price">Precio: $ {props.price}</p>
                     <p>12 cuotas sin interés de $ {props.payments}</p>
                     <ItemCount stock={props.stock}/>
                     <p>{props.desc}</p>
+                    <p>El producto se encuentra en stock actualmente. Ante cualquier duda sobre el mismo, no dude en contactarnos!</p>
+                    <p>Medios de pago:</p>
+                    <img src={pay}></img>
                 </div>
             </Box>
         </div>

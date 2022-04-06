@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Press+Start+2P&display=swap');
 
-
-.CardContainer {
-    display:inline;
-    padding: 15px;
+.productList {
+    font-family: 'Mukta', sans-serif;
+    padding-top: 15px;
 }
 
-.Card {
+.productList .categoryList{
+    padding: 10px;
+}
+
+.category {
     background: linear-gradient(45deg, rgba(34,227,238,1) 32%, rgba(170,62,236,1) 98%);
-    animation: rotate 5s linear infinite;
+    animation: rotate 3s linear infinite;
     position: relative;
     background-size: 200%;
-    max-width: 300px;
-    padding: 9px;
+    padding: 10px 5px;
     margin: 10px;
+    display: inline;
+    border-radius: 10px;
 }
 
 @keyframes rotate {
@@ -28,22 +32,12 @@
     }
 }
 
-.Card div{
+.category a{
     background-color: black;
     color: white;
-    padding: 12px 5px;
+    padding: 5px;
     font-family: 'Mukta', sans-serif;
     font-size: 18px;
-}
-
-.Card div p {
-    padding-top: 8px;
-}
-
-.Card div h3 a{
     text-decoration: none;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 13px;
-    color: white;
-    letter-spacing: 1px;
+    border-radius: 10px;
 }
