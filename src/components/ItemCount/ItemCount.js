@@ -1,9 +1,10 @@
 import React,{ useState } from "react";
 import Button from '@mui/material/Button';
+import {ThemeProvider } from '@mui/material/styles';
+import theme from "../MuiStyle/Themes"
 
 export default function ItemCount(props) {
     const [ count, setCount ] = useState(0)
-    const [ stock, setStock ] = useState(8)
 
     const addCount = () => {
         if (count == props.stock) {
@@ -22,7 +23,22 @@ export default function ItemCount(props) {
         }
     }
 
-    const onAdd = () => {
+    return(
+        <div>
+            {(props.action2) && (
+                <ThemeProvider theme={theme}>
+                    <Button variant="contained" component="span" color="secondary" onClick={addCount}>+</Button>
+                    <Button variant="contained" component="span" color="secondary" onClick={removeCount}>-</Button>
+                    <p>Cantidad seleccionada: {count}</p>
+                    <Button variant="contained" component="span" color="primary" onClick={(e) => props.action(e, count)}>Agregar al carro</Button>
+                </ThemeProvider>
+            )}
+        </div>
+    )
+}
+
+
+    /*const onAdd = () => {
         if (count > props.stock) {
             console.log ("Se ha seleccionado una cantidad mayor al stock disponible. Por favor elija una cantidad menor.")
         } else if (count >= 1) {
@@ -30,14 +46,4 @@ export default function ItemCount(props) {
         } else {
             console.log ("No se han agregado unidades al carro.")
         }
-    }
-
-    return(
-        <div>
-            <Button variant="contained" component="span" mt={12} onClick={addCount}>+</Button>
-            <Button variant="contained" component="span" mt={12} onClick={removeCount}>-</Button>
-            <p>Cantidad seleccionada: {count}</p>
-            <Button variant="contained" component="span" mt={12} onClick={onAdd}>Agregar al carro</Button>
-        </div>
-    )
-}
+    }*/

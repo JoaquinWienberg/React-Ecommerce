@@ -31,7 +31,7 @@ export default function ProductCategory () {
             <div className="categoryFilter">
                 {inventory.map((item) => {
                     const {id} = item;
-                    return (<Card key={id} product={item.product} price={item.price} payments={item.payments} stock={item.stock} type={item.type} id={item.id} />)
+                    return (<Card key={id} product={item.product} price={item.price} payments={item.payments} stock={item.stock} type={item.type} id={item.id} urlImg={item.url}/>)
                 } )}
             </div>
         </div>

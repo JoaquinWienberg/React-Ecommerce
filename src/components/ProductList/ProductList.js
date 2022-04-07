@@ -39,7 +39,7 @@ const ProductList = (props) => {
             <Box sx={{p: 1, m: 1, bgcolor: 'background.paper', borderRadius: 1, color: "#3f51b5", fontSize: 30}}>{props.productType}</Box>
             <Box sx={{display: 'flex', justifyContent: 'center', p: 1, m: 1, bgcolor: 'background.paper', borderRadius: 1, }}>
                 {availableStock.map((currentItem) => {
-                    return <Card id={currentItem.id} key ={currentItem.id} product={currentItem.product} type={currentItem.type} price={currentItem.price} payments={currentItem.payments} stock={currentItem.stock}/>
+                    return <Card id={currentItem.id} key ={currentItem.id} product={currentItem.product} type={currentItem.type} price={currentItem.price} payments={currentItem.payments} stock={currentItem.stock} urlImg={currentItem.url}/>
                 })}
             </Box>
         </div> 
