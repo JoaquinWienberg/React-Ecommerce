@@ -1,0 +1,17 @@
+.itemContainer {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+}
+
+.item p {
+    padding: 5px 20px;
+}
+
+

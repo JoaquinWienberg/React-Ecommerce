@@ -26,6 +26,6 @@ export default function ProductDetail () {
     }
     
     return (
-            <CardDetail product={inventory.product} price={inventory.price} desc={inventory.desc} payments={inventory.payments} urlImg={inventory.url} stock={inventory.stock}/>
+            <CardDetail product={inventory.product} price={inventory.price} desc={inventory.desc} payments={inventory.payments} urlImg={inventory.url} stock={inventory.stock} id={inventory.id}/>
     )
 }

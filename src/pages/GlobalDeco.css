@@ -1,0 +1,236 @@
+.hexBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+    height: 55vh;
+    justify-content: center;
+    width: 299px;
+}
+
+.hexBox *{
+    overflow: visible;
+}
+
+.hexagon {
+    width: 100px;
+    height: 57.735px;
+    position: relative;
+    animation: colorChange1 10s linear infinite;
+}
+
+.hexagon::before {
+    content: "";
+    position: absolute;
+    top: -28.8675px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 28.8675px solid red;
+    animation: colorChange2 10s linear infinite;
+}
+
+.hexagon::after {
+    content: "";
+    position: absolute;
+    bottom: -28.8675px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 28.8675px solid red;
+    animation: colorChange3 10s linear infinite;
+}
+
+.hexBox .hexagon:nth-child(1) {
+    margin-right: 50px;
+    animation-delay: calc((var(--index) -4) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(1)::before{
+    animation-delay: calc((var(--index) -4) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(1)::after{
+    animation-delay: calc((var(--index) -4) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(2) {
+    margin-left: 50px;
+    margin-top: 30px;
+    animation-delay: calc((var(--index) -5) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(2)::before{
+    animation-delay: calc((var(--index) -5) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(2)::after{
+    animation-delay: calc((var(--index) -5) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(3) {
+    margin-right: 50px;
+    margin-top: 30px;
+    animation-delay: calc((var(--index) -6) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(3)::before{
+    animation-delay: calc((var(--index) -6) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(3)::after{
+    animation-delay: calc((var(--index) -6) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(4) {
+    margin-left: 50px;
+    margin-top: 30px;
+    animation-delay: calc((var(--index) -7) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(4)::before{
+    animation-delay: calc((var(--index) -7) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(4)::after{
+    animation-delay: calc((var(--index) -7) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(5) {
+    margin-right: 50px;
+    margin-top: 30px;
+    animation-delay: calc((var(--index) -8) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(5)::before{
+    animation-delay: calc((var(--index) -8) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(5)::after{
+    animation-delay: calc((var(--index) -8) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(6) {
+    margin-left: 50px;
+    margin-top: 30px;
+    animation-delay: calc((var(--index) -9) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(6)::before{
+    animation-delay: calc((var(--index) -9) *0.25s)
+}
+
+.hexBox .hexagon:nth-child(6)::after{
+    animation-delay: calc((var(--index) -9) *0.25s)
+}
+
+@keyframes colorChange1 {
+
+    0% {
+        background:#08f2ff;
+        width: 100px;
+        height: 57.735px;
+        position: relative;
+        box-shadow: 0px 0px 60px 15px #08f2ff;
+    }
+
+    20% {
+        background: #5ea0fd;
+        width: 100px;
+        height: 57.735px;
+        position: relative;
+        box-shadow: 0px 0px 60px 15px #5ea0fd;
+    }
+
+    40% {
+        background:#c044fb ;
+        width: 100px;
+        height: 57.735px;
+        position: relative;
+        box-shadow: 0px 0px 60px 15px #c044fb ;
+    }
+    
+    60% {
+        background:#ff08f9 ;
+        width: 100px;
+        height: 57.735px;
+        position: relative;
+        box-shadow: 0px 0px 60px 15px #ff08f9  ;
+    }
+    
+    80% {
+        background:#3eecb0 ;
+        width: 100px;
+        height: 57.735px;
+        position: relative;
+        box-shadow: 0px 0px 60px 15px #3eecb0;
+    }
+
+    100% {
+        background:#08f2ff ;
+        width: 100px;
+        height: 57.735px;
+        position: relative;
+        box-shadow: 0px 0px 60px 15px #08f2ff;
+    }
+}
+
+@keyframes colorChange2 {
+
+    0% {
+
+        border-bottom-color:#08f2ff ;
+    }
+
+    20% {
+        border-bottom-color:#5ea0fd ;
+
+    }
+
+    40% {
+        border-bottom-color: #c044fb;
+    }
+    
+    60% {
+        border-bottom-color: #ff08f9;
+    }
+    
+    80% {
+        border-bottom-color: #3eecb0;
+    }
+
+    100% {
+        border-bottom-color: #08f2ff;
+    }
+}
+
+@keyframes colorChange3 {
+
+    0% {
+        border-top-color:#08f2ff;
+    }
+
+    20% {
+        border-top-color: #5ea0fd;
+    }
+
+    40% {
+        border-top-color:  #c044fb;
+    }
+    
+    60% {
+        border-top-color: #ff08f9;
+    }
+    
+    80% {
+        border-top-color: #3eecb0;
+    }
+
+    100% {
+        border-top-color: #08f2ff;
+    }
+}

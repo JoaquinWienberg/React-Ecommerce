@@ -25,14 +25,12 @@ export default function ItemCount(props) {
 
     return(
         <div>
-            {(props.action2) && (
-                <ThemeProvider theme={theme}>
-                    <Button variant="contained" component="span" color="secondary" onClick={addCount}>+</Button>
-                    <Button variant="contained" component="span" color="secondary" onClick={removeCount}>-</Button>
-                    <p>Cantidad seleccionada: {count}</p>
-                    <Button variant="contained" component="span" color="primary" onClick={(e) => props.action(e, count)}>Agregar al carro</Button>
-                </ThemeProvider>
-            )}
+            <ThemeProvider theme={theme}>
+                <Button variant="contained" component="span" color="secondary" onClick={addCount}>+</Button>
+                <Button variant="contained" component="span" color="secondary" onClick={removeCount}>-</Button>
+                <p>Cantidad seleccionada: {count}</p>
+                <Button variant="contained" component="span" color="primary" onClick={(e) => props.action(e, count)}>Agregar al carro</Button>
+            </ThemeProvider>        
         </div>
     )
 }

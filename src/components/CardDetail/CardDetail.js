@@ -1,5 +1,7 @@
-import React,{ useState, useEffect } from "react";
+import React,{ useState, useEffect, useContext } from "react";
 import ItemCount from "../ItemCount/ItemCount";
+import CartContext from "../../context/CartContext";
+import { CartShowcase } from "../../context/CartContext";
 import Box from '@mui/material/Box';
 import "./CardDetail.css";
 import pay from "../../img/payments.png";
@@ -12,18 +14,19 @@ import { Link } from "react-router-dom";
 export default function CardDetail (props) {
     
     const urlImg = props.urlImg;
-    const [cartAmount, setcartAmount] = useState(0);
-    const [hide ,setHide] = useState(true)
+    const {cartList, addItemToCart} = useContext(CartContext);
 
     const onAdd = (e, count) => {
         e.stopPropagation()
-        setcartAmount(cartAmount + count)
-        console.log("Se han agregado la cantidad seleccionada al carro")
-        setHide(false);
+        const newItem = {quantity: count, price: props.price, title: props.product, urlImg: props.urlImg, total: props.price * count, id: props.id}
+        addItemToCart(newItem)
+        console.log("Se ha agregado la cantidad seleccionada al carro")
+        console.log(newItem);
+
     }
 
     const confirmPurchase = () => {
-        console.log("Unidades confirmadas:", cartAmount)
+        console.log("Unidades confirmadas:", cartList)
     }
 
     return (
@@ -34,7 +37,7 @@ export default function CardDetail (props) {
                     <h3>{props.product}</h3>
                     <p className="price">Precio: $ {props.price}</p>
                     <p>12 cuotas sin interés de $ {props.payments}</p>
-                    <ItemCount stock={props.stock} action={onAdd} action2={hide}/>
+                    <ItemCount stock={props.stock} action={onAdd} />
                     <ThemeProvider theme={theme}>
                         <Link to={"/cart"}>
                         <Button variant="contained" component="span" color="primary" onClick={confirmPurchase}>Confirmar compra</Button>

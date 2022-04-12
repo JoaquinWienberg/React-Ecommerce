@@ -1,6 +1,10 @@
 import ProductList from '../components/ProductList/ProductList';
 import { Link } from 'react-router-dom';
-import "./ProductList.css"
+import "./ProductList.css";
+import "./GlobalDeco.css";
+import * as React from 'react';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 
 export default function Catalog(props){
 
@@ -16,8 +20,33 @@ export default function Catalog(props){
                     <Link to={"./RAM"}>Memorias Ram</Link>
                 </div>
             </div>
-
-            <ProductList/>
+            <Box sx={{ flexgrow:1}}>
+                <Grid container spacing={0} justifyContent="center">
+                    <Grid item xs="auto">
+                            <div className="hexBox">
+                                <div className="hexagon"></div>
+                                <div className="hexagon"></div>
+                                <div className="hexagon"></div>
+                                <div className="hexagon"></div>
+                                <div className="hexagon"></div>
+                                <div className="hexagon"></div>
+                            </div>
+                    </Grid>
+                    <Grid item xs={6}>
+                            <ProductList/>
+                    </Grid>
+                    <Grid item xs="auto">
+                            <div className="hexBox">
+                                <div className="hexagon"></div>
+                                <div className="hexagon"></div>
+                                <div className="hexagon"></div>
+                                <div className="hexagon"></div>
+                                <div className="hexagon"></div>
+                                <div className="hexagon"></div>
+                            </div>
+                    </Grid>
+                </Grid>
+            </Box>
         </div>
     )
 }

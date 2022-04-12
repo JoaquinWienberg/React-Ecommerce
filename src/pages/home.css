@@ -22,7 +22,9 @@
 .background .background-container h2{
     color: white;
     font-family: 'Press Start 2P', cursive;
+    animation: slidenorth 2s linear;
 }
+
 
 .background .background-container .products{
     margin-top: 60px;
