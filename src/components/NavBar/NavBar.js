@@ -13,7 +13,8 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
-import "./NavBar.css"
+import "./NavBar.css";
+import CartWidget from "../CartWidget/CartWidget";
 
 const pages = [{title: 'Inicio', linkUrl: "/"} ,
               {title: 'Productos', linkUrl: "/Products"} ,
@@ -119,7 +120,7 @@ const ResponsiveAppBar = () => {
           </Box>
           <Box sx={{ ml: -2 }}>
               <button>
-              <ShoppingCartIcon/>
+              <CartWidget/>
               </button>
           </Box>
           <Box sx={{ flexGrow: 0 }}>

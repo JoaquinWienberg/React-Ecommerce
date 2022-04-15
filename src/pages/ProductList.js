@@ -32,7 +32,7 @@ export default function Catalog(props){
                                 <div className="hexagon"></div>
                             </div>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={8} xm={6}>
                             <ProductList/>
                     </Grid>
                     <Grid item xs="auto">

@@ -18,10 +18,12 @@ export default function CardDetail (props) {
 
     const onAdd = (e, count) => {
         e.stopPropagation()
-        const newItem = {quantity: count, price: props.price, title: props.product, urlImg: props.urlImg, total: props.price * count, id: props.id}
-        addItemToCart(newItem)
-        console.log("Se ha agregado la cantidad seleccionada al carro")
-        console.log(newItem);
+        if (count > 0) {
+            const newItem = {quantity: count, price: props.price, title: props.product, urlImg: props.urlImg, total: props.price * count, id: props.id}
+            addItemToCart(newItem)
+            console.log("Se ha agregado la cantidad seleccionada al carro")
+            console.log(newItem);
+        }
 
     }
 
