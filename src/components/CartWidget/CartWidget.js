@@ -26,6 +26,10 @@ export default function CartWidget (props){
     setAnchorEl(null);
     };
 
+    const cartQuantity = cartList.reduce(function(previousQ, currentQ){
+        return previousQ + currentQ.quantity
+    } ,0)
+
 
     if (cartList.length == 0) {
         return null
@@ -41,7 +45,7 @@ export default function CartWidget (props){
                     aria-haspopup="true"
                     aria-expanded={open ? 'true' : undefined}
                 />
-                {cartList.length}
+                {cartQuantity}
                 <Menu
                 id="fade-menu"
                 MenuListProps={{
