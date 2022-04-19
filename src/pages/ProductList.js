@@ -22,7 +22,7 @@ export default function Catalog(props){
             </div>
             <Box sx={{ flexgrow:1}}>
                 <Grid container spacing={0} justifyContent="center">
-                    <Grid item xs="auto">
+                    <Grid item xs="auto" sm="auto">
                             <div className="hexBox">
                                 <div className="hexagon"></div>
                                 <div className="hexagon"></div>
@@ -35,7 +35,7 @@ export default function Catalog(props){
                     <Grid item xs={8} xm={6}>
                             <ProductList/>
                     </Grid>
-                    <Grid item xs="auto">
+                    <Grid item xs="auto" sm="auto">
                             <div className="hexBox">
                                 <div className="hexagon"></div>
                                 <div className="hexagon"></div>

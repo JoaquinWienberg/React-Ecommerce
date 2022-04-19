@@ -2,14 +2,16 @@
 
 
 .CardContainer {
-    display:inline;
+    display:flex;
     padding: 15px;
+    justify-content: center;
+    
 }
 
 .Card {
     background: linear-gradient(45deg, rgba(34,227,238,1) 32%, rgba(170,62,236,1) 98%);
     animation: rotate 5s linear infinite;
-    position: relative;
+
     background-size: 200%;
     max-width: 300px;
     padding: 9px;
