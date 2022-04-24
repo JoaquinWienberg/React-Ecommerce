@@ -35,13 +35,3 @@ export default function ItemCount(props) {
     )
 }
 
-
-    /*const onAdd = () => {
-        if (count > props.stock) {
-            console.log ("Se ha seleccionado una cantidad mayor al stock disponible. Por favor elija una cantidad menor.")
-        } else if (count >= 1) {
-            console.log ("El producto se a agregado con exito al carro.")
-        } else {
-            console.log ("No se han agregado unidades al carro.")
-        }
-    }*/
