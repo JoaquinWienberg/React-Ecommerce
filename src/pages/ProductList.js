@@ -19,10 +19,16 @@ export default function Catalog(props){
                 <div className="category">
                     <Link to={"./RAM"}>Memorias Ram</Link>
                 </div>
+                <div className="category">
+                    <Link to={"./coolerCPU"}>Coolers de CPU</Link>
+                </div>
+                <div className="category">
+                    <Link to={"./CPU"}>Procesadores</Link>
+                </div>
             </div>
-            <Box sx={{ flexgrow:1}}>
-                <Grid container spacing={0} justifyContent="center">
-                    <Grid item xs="auto" sm="auto">
+            <Box sx={{ width: "100%"}}>
+                <Grid container spacing={0} justifyContent="space-between">
+                    <Grid item xs={12} md={2} justifyContent="center">
                             <div className="hexBox">
                                 <div className="hexagon"></div>
                                 <div className="hexagon"></div>
@@ -32,10 +38,10 @@ export default function Catalog(props){
                                 <div className="hexagon"></div>
                             </div>
                     </Grid>
-                    <Grid item xs={8} xm={6}>
+                    <Grid item xs={12} md={8} container spacing={1} justifyContent="space-around">
                             <ProductList/>
                     </Grid>
-                    <Grid item xs="auto" sm="auto">
+                    <Grid item xs={12} md={2} justifyContent="center">
                             <div className="hexBox">
                                 <div className="hexagon"></div>
                                 <div className="hexagon"></div>

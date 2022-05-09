@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Press+Start+2P&display=swap');
+
 .itemContainer {
     margin-top: 40px;
     display: flex;
@@ -8,10 +10,63 @@
 .item {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    border-radius: 15px;
+    padding: 1px 3px;
+    width:95%;
+    margin-top: 4px;
+    border: solid black 2px;
+    box-shadow: 0 3px 8px 0px rgba(25, 58, 59, 0.829);
 }
 
 .item p {
-    padding: 5px 20px;
+    padding: 5px 5px;
+    font-size: 12px;
+    font-family: 'Mukta', sans-serif;
 }
 
+.item img{
+    width: 90px;
+    height: auto;
+    padding: 2px;
+    border-radius: 15px;
+}
 
+.item span {
+    font-size: 12px;
+}
+
+.totalPrice {
+    font-family: 'Mukta', sans-serif;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 768px){
+
+
+    .itemContainer {
+        margin-top: 40px;
+    }
+    
+    .item {
+        width:700px;
+        margin-top: 10px;
+    }
+    .item p {
+        padding: 5px 20px;
+        font-size: 18px;
+    }
+    
+    .item img{
+        width: 150px;
+        height: auto;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    .totalPrice {
+        font-size: 25px;
+    }
+
+}

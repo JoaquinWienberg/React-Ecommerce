@@ -1,6 +1,4 @@
 import Card from "../Card/Card";
-import Box from '@mui/material/Box';
-import data from "./ProductDatabase.JSON";
 import React,{useState, useEffect} from "react";
 import CircularProgress from '@mui/material/CircularProgress';
 import {collection, getDocs } from "firebase/firestore"
@@ -15,31 +13,8 @@ const ProductList = (props) => {
     const url = "https://run.mocky.io/v3/2f850c35-595f-43c8-ba56-7cd21c8acc19";
     const [availableStock, setavailableStock] = useState([]);
     const [loading, setLoading] = useState(true);
-    
-    /*const getItem = async () => {       //Imports the updated stock from Mocky
-        const response = await fetch(url);
-        const stock = await response.json();
-        return stock;
-    }
 
-    const newProducts = () => {
-            return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(getItem())
-            }, 1200);
-        })
-    };
-
-    useEffect ( () => {
-        newProducts().then((stock) => {
-            setLoading(false);
-            setavailableStock(stock)
-        }).finally(() => {
-            console.log(".Finally done")
-        })
-    }, [])*/
-
-    const getItem = async () => {       //Imports the updated stock from Mocky
+    const getItem = async () => {       //Imports the updated stock from Firebase
         const itemDB = collection(db, 'products');
         const itemsSnapshot = await getDocs(itemDB);
         const stock = itemsSnapshot.docs.map((doc) => {

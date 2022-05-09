@@ -4,18 +4,13 @@ import Button from '@mui/material/Button';
 import "./Cart.css";
 import FormDialog from "../components/Modal/Modal";
 import db from "../Firebase"
-import {collection, addDoc } from "firebase/firestore"
+import {collection, addDoc } from "firebase/firestore";
+import {ThemeProvider } from '@mui/material/styles';
+import theme from "../components/MuiStyle/Themes"
 
 export default function Cart (props){
 
-    const {cartList, cartTotal, clear, remItemFromCart, calculateTotal} = useContext(CartContext);
-    const [clientInfo, setClientInfo] = useState ({
-        name: "",
-        phone: "",
-        email: "",
-        location: "",
-        zipcode: "",
-    })
+    const {cartList, cartTotal, clear, remItemFromCart, calculateTotal, deleteCart} = useContext(CartContext);
     const [orderComplete, setCompleteOrder] = useState(false)
     const [orderCode, setOrderCode] = useState()
 
@@ -28,7 +23,6 @@ export default function Cart (props){
     }  
 
     const confirmPurchase = (data) => {
-        setClientInfo(data)
         const date = new Date();
         const order = {
             total: cartTotal, 
@@ -43,6 +37,7 @@ export default function Cart (props){
             }),
         }
         createOrder(order)
+        deleteCart()
     }
 
     
@@ -53,39 +48,29 @@ export default function Cart (props){
                 <h1>Carrito actual: </h1>
                 {cartList.map((item, i) => {
                     return (<div key={i} className="item">
+                                <img src={item.urlImg}></img>
                                 <p>{item.title}</p>
                                 <p>Cantidad: {item.quantity}</p>
-                                <p>Importe total: {item.total}</p>
-                                <Button variant="contained" component="span" color="primary" onClick={() => remItemFromCart(item)}>Eliminar</Button>
+                                <p>Importe total: {item.total.toLocaleString()}</p>
+                                <ThemeProvider theme={theme}>
+                                    <Button variant="contained" component="span" color="secondary" size="small" onClick={() => remItemFromCart(item)}>Eliminar</Button>
+                                </ThemeProvider>
                             </div>                        
                             )})
                 }
-                <div>Total del pedido: {cartTotal}</div>
+                <div className="totalPrice">Total del pedido: {cartTotal.toLocaleString()}</div>
                 {orderComplete ? (
                 <h3>La orden ha sido completada! Su numero de orden es: {orderCode}</h3>
                 ) : (
-                <Button variant="contained" component="span" color="primary" onClick={clear} className="clear">Limpiar carro</Button>,
-                <FormDialog action={confirmPurchase}/>
+                    <ThemeProvider theme={theme}>
+                        <Button variant="contained" component="span" color="primary" onClick={clear} className="clear">Limpiar carro</Button>,
+                        { parseInt(cartTotal) > 0 && 
+                            <FormDialog action={confirmPurchase}/>                        
+                        }
+                    </ThemeProvider>
             )}
         </div>
     )
 }
 
 
-/*
-
-const [purchase, setPurchase] = useState (
-        {
-            total: cartTotal, 
-            buyer: clientInfo,
-            items: cartList.map ((cartList) =>{
-                return{
-                    id: cartList.id,
-                    product: cartList.product,
-                    price:cartList.price,
-                }
-            }),
-        }
-    )
-
-    */

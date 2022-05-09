@@ -11,9 +11,10 @@
 .Card {
     background: linear-gradient(45deg, rgba(34,227,238,1) 32%, rgba(170,62,236,1) 98%);
     animation: rotate 5s linear infinite;
-
     background-size: 200%;
     max-width: 300px;
+    min-width: 200px;
+    min-height: 350px;
     padding: 9px;
     margin: 10px;
 }
@@ -36,7 +37,8 @@
     padding: 12px 5px;
     font-family: 'Mukta', sans-serif;
     font-size: 18px;
-    height: 300px;
+    min-height: 380px;
+    max-height: 450px;
 }
 
 .Card div a{
@@ -60,4 +62,20 @@
 .prodImg {
     width: 200px;
     height: 100px;
+}
+
+.goToDetail {
+    text-decoration: none;
+    width: 95%;
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+    display: block;
+    margin: 20px auto;
+    border: solid white 3px;
+    color: white;
+}
+
+.goToDetail:hover{
+    background-color: white;
+    color: black;
 }

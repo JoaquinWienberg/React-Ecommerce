@@ -27,13 +27,20 @@ const CartShowcase = ({children}) => {
         setCartTotal(cartTotal + item.total)
     }
 
+    const deleteCart = () =>    {
+        setCartList([])
+        setCartTotal(0)
+    }
+
+
     const cartInfo = {
         cartList,
         cartTotal,
         addItemToCart,
         clear,
         remItemFromCart,  
-        calculateTotal,      
+        calculateTotal,
+        deleteCart,      
     }
 
     return (

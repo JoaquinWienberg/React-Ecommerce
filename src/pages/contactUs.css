@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Press+Start+2P&display=swap');
+
+.formContainer {
+    max-width: 90%;
+    margin: auto;
+    padding: 30px 10px;
+}
+
+.formContainer div{
+    font-family: 'Mukta', sans-serif;
+    font-size: 15px;
+    text-align: justify;
+}
+
+.formContainer div h2{
+    text-align: center;
+}
+
+@media only screen and (min-width: 720px){
+
+
+    .formContainer div{
+        font-family: 'Mukta', sans-serif;
+        font-size: 18px;
+        text-align: justify;
+    }
+}

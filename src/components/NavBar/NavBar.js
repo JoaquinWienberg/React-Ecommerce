@@ -7,21 +7,16 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
 import "./NavBar.css";
 import CartWidget from "../CartWidget/CartWidget";
 
 const pages = [{title: 'Inicio', linkUrl: "/"} ,
               {title: 'Productos', linkUrl: "/Products"} ,
-              {title: 'Sobre nosotros', linkUrl: "/"} ,
-              {title: 'Contactenos', linkUrl: "/"}];
-//const pages = [ 'Home', 'Products', 'About us', 'Contact Us'];
-const settings = ['Profile', 'Contact us', 'Cart', 'Logout'];
+              {title: 'Preguntas Frecuentes', linkUrl: "/faq"} ,
+              {title: 'Contactenos', linkUrl: "/contactUs"}];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -53,7 +48,7 @@ const ResponsiveAppBar = () => {
             sx={{ mr: 2, display: { xs: 'none', md: 'flex', textDecoration: "none" } }}
           >
               <Link to={"/"} sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none" }} className="logo">
-                Computer Store
+                Elite Hardware
               </Link>
           </Typography>
 
@@ -99,14 +94,16 @@ const ResponsiveAppBar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, alignItems:"center" }}
             >
-            <Link to={"/"} sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none" }}>
-            Computer Store
+            <Link to={"/"} sx={{ my: 2, color: 'white', display: 'block', textDecoration: "none" }} className="logo">
+            Elite Hardware
               </Link>
-            
+            <Button sx={{ flexGrow: 1 , display: { xs: 'flex', md: 'none' } }} >
+              <CartWidget/>
+            </Button>
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: "space-around" }}>
             {pages.map((page) => (
               <Button
                 key={page.title}
@@ -117,41 +114,11 @@ const ResponsiveAppBar = () => {
                 </Link>
               </Button>
             ))}
-          </Box>
-          <Box sx={{ ml: -2 }}>
-              <button>
+            <Button sx={{ backgroundColor: "#2c387e" }}>
               <CartWidget/>
-              </button>
+            </Button>
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+
         </Toolbar>
       </Container>
     </AppBar>

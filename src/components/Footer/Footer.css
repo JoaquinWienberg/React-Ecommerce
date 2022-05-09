@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&family=Press+Start+2P&display=swap');
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Mukta', sans-serif;
+    background: linear-gradient(217deg, #cd29f2, #29f2eb);
+    background-size: 400% 400%;
+    -webkit-animation: footerChange 5s ease infinite;
+    -moz-animation: footerChange 5s ease infinite;
+    animation: footerChange 5s ease infinite;
+    color: white;
+    padding: 50px 10px;
+}
+
+.socialLogo {
+    text-decoration: none;
+}
+
+@-webkit-keyframes footerChange {
+    0%{background-position:96% 0%}
+    50%{background-position:5% 100%}
+    100%{background-position:96% 0%}
+}
+@-moz-keyframes footerChange {
+    0%{background-position:96% 0%}
+    50%{background-position:5% 100%}
+    100%{background-position:96% 0%}
+}
+@keyframes footerChange {
+    0%{background-position:96% 0%}
+    50%{background-position:5% 100%}
+    100%{background-position:96% 0%}
+}
+
+@media only screen and (min-width: 720px){
+
+    .footer{
+        flex-direction: row ;
+        justify-content: space-around;
+    }
+
+    .footer p{
+        width: 300px;
+    }
+
+    .footer div{
+        width: 300px;
+    }
+
+
+}
+

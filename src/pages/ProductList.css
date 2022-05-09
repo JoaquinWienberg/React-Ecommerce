@@ -3,6 +3,7 @@
 .productList {
     font-family: 'Mukta', sans-serif;
     padding-top: 15px;
+    min-height: 80vh;
 }
 
 .productList .categoryList{
