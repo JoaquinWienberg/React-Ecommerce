@@ -7,6 +7,8 @@ import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import React,{ useState, useEffect, useContext } from "react";
 import { FormControl } from '@mui/material';
+import {ThemeProvider } from '@mui/material/styles';
+import theme from "../MuiStyle/Themes"
 
 export default function FormDialog(props) {
     const [open, setOpen] = React.useState(false);
@@ -51,9 +53,11 @@ export default function FormDialog(props) {
 
     return (
     <div>
-        <Button variant="outlined" color="primary" onClick={handleClickOpen}>
-        Finalizar compra
-        </Button>
+        <ThemeProvider theme={theme}>
+            <Button variant="contained" color="secondary" sx={{m:1}} onClick={handleClickOpen}>
+            Finalizar compra
+            </Button>
+        </ThemeProvider>
         <Dialog open={open} onClose={handleClose}>
         <DialogTitle>Finalizar compra</DialogTitle>
         <DialogContent>

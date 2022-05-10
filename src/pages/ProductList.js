@@ -14,16 +14,16 @@ export default function Catalog(props){
             <h3>Ver por categoria:</h3>
             <div className="categoryList">
                 <div className="category">
-                    <Link to={"./GPU"}>Placas de video</Link>
+                    <Link to={"./GPU"} className="categoryItem">Placas de video</Link>
                 </div>
                 <div className="category">
-                    <Link to={"./RAM"}>Memorias Ram</Link>
+                    <Link to={"./RAM"} className="categoryItem">Memorias Ram</Link>
                 </div>
                 <div className="category">
-                    <Link to={"./coolerCPU"}>Coolers de CPU</Link>
+                    <Link to={"./coolerCPU"} className="categoryItem">Coolers de CPU</Link>
                 </div>
                 <div className="category">
-                    <Link to={"./CPU"}>Procesadores</Link>
+                    <Link to={"./CPU"} className="categoryItem">Procesadores</Link>
                 </div>
             </div>
             <Box sx={{ width: "100%"}}>

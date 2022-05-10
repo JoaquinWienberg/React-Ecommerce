@@ -1,0 +1,8 @@
+.error404{
+    padding: 120px 0;
+    min-height: 50vh;
+}
+
+.error404 a{
+    text-decoration: none;
+}

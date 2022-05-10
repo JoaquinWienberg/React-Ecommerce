@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
 import "./home.css";
-import cloud from "../img/cloud.png"
+import cloud from "../img/cloud.png";
+import Caro from "../components/Carousel/Carousel"
 
 export default function HomePage(props){
 
@@ -10,7 +10,7 @@ export default function HomePage(props){
             <img src={cloud} alt="cloud" className="cloud2"></img>
             <div className="background-container">
                 <h2>Bienvenidos a nuestro nuevo sitio!</h2>
-                <div className="products"><Link to={"/products"}>Ver productos</Link></div>
+                <Caro className="carousel"/>
             </div>
             
         </div>

@@ -75,6 +75,10 @@
     color: white;
 }
 
+.itemPrice{
+    font-size: 22px;
+}
+
 .goToDetail:hover{
     background-color: white;
     color: black;

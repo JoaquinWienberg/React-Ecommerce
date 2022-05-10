@@ -8,6 +8,12 @@
 
 .productList .categoryList{
     padding: 10px;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .category {
@@ -15,11 +21,14 @@
     animation: rotate 3s linear infinite;
     position: relative;
     background-size: 200%;
-    padding: 10px 5px;
+    padding: 5px 5px;
     margin: 10px;
     display: inline;
     border-radius: 10px;
+    width: 130px;
 }
+
+
 
 @keyframes rotate {
     0% {
@@ -41,4 +50,18 @@
     font-size: 18px;
     text-decoration: none;
     border-radius: 10px;
+    width: 120px;
+    display: block;
+}
+
+@media only screen and (min-width: 768px){
+
+    .productList .categoryList{
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        margin-right: auto;
+        margin-left: auto;
+        justify-content: center;
+    }
 }

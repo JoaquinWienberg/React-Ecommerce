@@ -1,0 +1,30 @@
+.carouselBackground{
+    background-color: black !important;
+    overflow: hidden;
+}
+
+.linkButton{
+    position: absolute;
+    top:-40px;
+}
+
+.linkTo{
+    text-decoration: none;
+    color: white;
+
+}
+
+.carouselImg {
+    width: 696px;
+    height: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (min-width: 1024px){
+    .carouselImg {
+        width: 1180px;
+        height: 678px;
+    }
+}

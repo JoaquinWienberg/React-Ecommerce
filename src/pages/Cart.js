@@ -63,7 +63,7 @@ export default function Cart (props){
                 <h3>La orden ha sido completada! Su numero de orden es: {orderCode}</h3>
                 ) : (
                     <ThemeProvider theme={theme}>
-                        <Button variant="contained" component="span" color="primary" onClick={clear} className="clear">Limpiar carro</Button>,
+                        <Button variant="contained" component="span" color="primary" onClick={clear} className="clear">Limpiar carro</Button>
                         { parseInt(cartTotal) > 0 && 
                             <FormDialog action={confirmPurchase}/>                        
                         }
